@@ -1,0 +1,197 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgba(41, 41, 41, 1);
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  text-transform: capitalize;
+  font-size: 46px;
+  max-width: 60vw;
+  color: rgba(41, 41, 41, 1);
+  font-weight: 700;
+}
+
+h5 {
+  color: #757575;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+  font-weight: 500;
+  margin-top: 1.72em;
+}
+
+#map_container {
+  height: 600px;
+}
+
+#vis {
+  display: inline-block;
+}
+
+#map_text {
+  padding-bottom: 200px;
+  display: inline-block;
+  width: 400px;
+  height: 150px;
+  overflow: scroll;
+  margin-right: 20px;
+}
+
+.path {
+  stroke: black;
+  stroke-width: 2;
+  fill: black;
+}
+
+.state {
+  stroke-width: 1;
+}
+
+.state:hover {
+  fill: lightblue;
+  cursor: pointer;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  padding: 12px 30px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+  color: white;
+}
+
+body {
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 10px;
+  margin: 20px;
+}
+
+p {
+  color: rgba(41, 41, 41, 1);
+  font-size: 18px;
+  letter-spacing: -0.003em;
+  font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#chart {
+  margin-left: 20px;
+  padding-bottom: 30px;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  width: 120px;
+  min-height: 30px;
+  padding: 8px 12px;
+  font: 12px sans-serif;
+  background: white;
+  border: 0px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+text.label {
+  font-size: 12px;
+  width: 200px;
+}
+
+.legend {
+  float: left;
+}
+
+.axis text {
+  font: 12px sans-serif;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#two_scatterplots {
+  display: inline-block;
+  position: relative;
+}
+
+#linechart {
+  position: absolute;
+  transition-duration: 0.5s;
+  background-color: white;
+}
+
+.opaque {
+  opacity: 0;
+}
+
+#scatterplot {
+  position: inherit;
+  background-color: white;
+  top: -480px;
+}
+
+#scatterplot_container {
+  height: 600px;
+}
+
+#scatter_text {
+  margin-bottom: 120px;
+  display: inline-block;
+  width: 400px;
+  height: 260px;
+  overflow: scroll;
+  margin-right: 20px;
+}
+
+/* Case study with circles */
+
+#case_study {
+  margin-top: 50px;
+}
+
+.case_text {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  overflow: scroll;
+  margin-right: 75px;
+  margin-top: 50px;
+}
+
+.case-vis {
+  display: inline-block;
+}

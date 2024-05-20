@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Childhood environment and gender gaps in adulthood</title>
+    <link rel="stylesheet" href="scroll_test_style.css" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Childhood Environment and Gender Gaps in Adulthood</h1>
+    <h4>Data Visualization Final Project @CMU 2021</h4>
+    <h5>
+      November 2021 | Tammy Zhou, Priya Jain, Alana Mittleman, and Rob Lambeth
+    </h5>
+
+    <div id="map_container">
+      <h3 id="mapTitle">U.S. States Regional Economic Inequality</h3>
+      <div id="map_text">
+        <p>
+          The <b>Theil index (represented by redness)</b>is a statistic used to
+          measure economic inequality. The Theil index measures an entropic
+          "distance" the population is away from the "ideal" egalitarian state
+          of everyone having the same income. The numerical result is in terms
+          of negative entropy so that a higher number indicates more order that
+          is further away from the "ideal" of maximum disorder. Formulating the
+          index to represent negative entropy instead of entropy allows it to be
+          a measure of inequality rather than equality.
+        </p>
+        <p>
+          <b>Circle size</b> → Population size <br />
+          <b>Circle color → </b> <br />
+          medium/light orange and blue represents male dominant gender gap
+          <br />
+          Dark orange represents female dominant gender gap
+        </p>
+        <p>
+          We can see that for the majority of the country, males make more than
+          females. The gender gap is skewed towards males. This is incredibly
+          upsetting. If we analyze the map further, we can see that the east
+          coast is less slightly more gender equal than the west coast and
+          midwest. You might ask why this is the case?
+        </p>
+        <p>
+          This is something we found really interesting. After considering
+          multiple explanations for why this is the case, we hypothesized that
+          low incomes are a significant part that low income jobs weigh more
+          heavily towards female success rate being higher than male success
+          rate. This hypothesis is most consistent with our next finding
+          (reversal of gender gap at the 25th percentile)
+        </p>
+      </div>
+
+      <div id="vis">
+        <div id="chart"></div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br />
+
+    <div id="scatterplot_container">
+      <h3 id="scatterTitle">Wage and Employment Gender Gap</h3>
+      <div id="scatter_text">
+        <p>
+          This data compares people’s wages at age 30 compared to their parent’s
+          income percentile. This graph demonstrates the apparent income gender
+          gap that exists at all different parent income percentiles. At every
+          parent income percentile, females make lower wages than males. Super
+          upsetting right! In fact, this gap becomes wider at higher income
+          levels.
+        </p>
+        <p>
+          We can see that males are employed at lower rates than females at
+          lower parent income percentiles. However, we see an interesting
+          reversal at about the 25th parent income percentile mark where a
+          higher percentage of males are employed than females.
+        </p>
+        <!-- <p>
+          The <b>Theil index </b>is a statistic used to measure economic
+          inequality. The Theil index measures an entropic "distance" the
+          population is away from the "ideal" egalitarian state of everyone
+          having the same income. The numerical result is in terms of negative
+          entropy so that a higher number indicates more order that is further
+          away from the "ideal" of maximum disorder. Formulating the index to
+          represent negative entropy instead of entropy allows it to be a
+          measure of inequality rather than equality.
+        </p>
+        <p>
+          The <b>Theil index </b>is a statistic used to measure economic
+          inequality. The Theil index measures an entropic "distance" the
+          population is away from the "ideal" egalitarian state of everyone
+          having the same income. The numerical result is in terms of negative
+          entropy so that a higher number indicates more order that is further
+          away from the "ideal" of maximum disorder. Formulating the index to
+          represent negative entropy instead of entropy allows it to be a
+          measure of inequality rather than equality.
+        </p> -->
+      </div>
+      <div id="two_scatterplots">
+        <div id="linechart"></div>
+        <div id="scatterplot2"></div>
+      </div>
+    </div>
+
+    <div id="case_study">
+      <div class="case_circles">
+        <h3>New York vs. North Carolina employment rate</h3>
+        <div class="case_text" id="emp_rate">
+          <p>
+            As we saw in the above scatter plot, children growing up in the
+            lowest quantile of household incomes experience an employment rate
+            gender gap later in life in which women actually have higher
+            employment rates than men. <br /><br />
+            For a small case study, lets take a look at the employment rates of
+            men and women in two very different states, New York and North
+            Carolina.
+            <br /><br />
+            You can see that for the first quantile of parent incomes, this gap
+            is present in both states. But are there other factors that
+            correlate with gaps like these? And what other factors correlate
+            with the larger gender gap in North Carolina?
+          </p>
+        </div>
+        <div class="case-vis" id="circles1"></div>
+      </div>
+      <div class="case_circles">
+        <h3>Comparing NY vs. NC high school dropout rate</h3>
+        <div class="case_text" id="dropout">
+          <p>
+            The regional differences in these gender gaps are closely correlated
+            with commonly accepted proxies for neighborhood disadvantage,
+            especially factors that are tied to race and histories of segregated
+            communities and education systems.
+            <br /><br />
+            For example, North Carolina has a significantly higher high school
+            dropout rate when compared to New York. This is closely correlated
+            with its greater gender gap for lower income childhoods, and this
+            correlation holds across other states as well.
+          </p>
+        </div>
+        <div class="case-vis" id="circles2"></div>
+      </div>
+      <div class="case_circles">
+        <h3>New York vs. North Carolina black population size</h3>
+        <div class="case_text" id="pop_black">
+          <p>
+            Another factor with a very close correlation to the employment
+            gender gap for first-income-quantile childhood environments is a
+            region's fraction of black citizens claiming residence there.
+            <br /><br />
+            For example, North Carolina's larger gender gap for lower income
+            childhoods is closely correlated with its larger black population.
+            <br /><br />
+            These are just a few of the segregation and economic
+            opportunity-related factors with a close correlation to the gender
+            gap, but we hope the point has been made clear that disadvanted
+            neighborhoods consistently are sources of the type of employment
+            gender gaps shown above in the scatter plot.
+          </p>
+        </div>
+        <div class="case-vis" id="circles3"></div>
+      </div>
+    </div>
+  </body>
+</html>
